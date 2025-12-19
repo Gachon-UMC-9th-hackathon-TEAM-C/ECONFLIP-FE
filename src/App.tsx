@@ -6,12 +6,13 @@ import ProtectedLayout from './layout/ProtectedLayout';
 import LoginPage from './pages/LoginPage';
 import Review from './pages/Review';
 import Profile from './pages/Profile';
-import QuizPage from './pages/quizPage';
+import QuizPage from './pages/QuizPage';
 import LearningCompletedPage from './pages/LearningCompletedPage';
 import CardLearningPage from './pages/CardLearningPage';
 import OnboardingPage from './pages/OnboardingPage';
 import ReviewCardPage from './pages/ReviewCardPage';
 import HomePage from './pages/Home/HomePage';
+import TodayLearnPage from './pages/TodayLearnPage';
 import LibraryPage from './pages/Library/LibraryPage';
 const publicRoutes: RouteObject[] = [
   {
@@ -70,6 +71,10 @@ const protectedRoutes: RouteObject[] = [
       {
         path: "reviewcard",
         element: <ReviewCardPage />,
+      },
+      {
+        path: "todaylearn",
+        element: <TodayLearnPage />,
       },
     ],
   },
