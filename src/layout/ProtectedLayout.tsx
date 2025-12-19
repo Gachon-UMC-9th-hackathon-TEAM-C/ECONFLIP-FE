@@ -5,7 +5,7 @@ const ProtectedLayout = () => {
     const location = useLocation();
 
     // 사이드바를 숨길 경로 목록
-    const hideSidebarPaths = ['/review','/Quiz'];
+    const hideSidebarPaths = ['/cardlearning', '/onboarding', '/reviewcard', '/learningCompleted','/Quiz','/todaylearn'];
 
     // 현재 경로가 목록에 포함되어 있는지 여부
     const shouldHideSidebar = hideSidebarPaths.some((path) =>
@@ -13,10 +13,14 @@ const ProtectedLayout = () => {
     );
     
     return (
-        <div className="flex min-h-0 h-screen w-screen bg-violet-100 font-[Pretendard]">
-            {!shouldHideSidebar && <Sidebar />}
+        <div className="flex min-h-screen w-full bg-violet-100 font-[Pretendard]">
+            {!shouldHideSidebar && 
+                <div className="w-74">
+                    <Sidebar />
+                </div>
+            }
             {/* 본문 영역 */}
-            <div className="flex flex-1 w-full">
+            <div className="flex flex-1">
                 <Outlet />
             </div>
         </div>
