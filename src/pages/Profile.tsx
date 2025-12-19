@@ -23,7 +23,7 @@ const Profile = () => {
   const settings = ["학습목표 설정", "알림설정", "데이터 초기화"];
 
   return (
-    <div className="w-full min-h-screen bg-gray-8 flex flex-col items-center pb-10">
+    <div className="flex flex-col w-full min-h bg-gray-8 items-center pb-10">
 
       {/* 1. 상단 타이틀 */}
       <header className="w-full max-w-xl px-6 pt-8 pb-4">
@@ -78,7 +78,7 @@ const Profile = () => {
 
         {/* 5. 북마크한 용어 */}
         <section>
-        <div className="bg-white rounded-3xl px-6 py-5 shadow-sm flex justify-between">
+          <div className="bg-white rounded-3xl px-6 py-5 shadow-sm flex justify-between">
             {/* 왼쪽: 제목만 */}
             <span className="text-medium-15 font-semibold text-gray-1 mb-5">
             북마크한 용어

@@ -13,10 +13,14 @@ const ProtectedLayout = () => {
     );
     
     return (
-        <div className="flex min-h-0 min-h-screen w-screen bg-violet-100 font-[Pretendard]">
-            {!shouldHideSidebar && <Sidebar />}
+        <div className="flex min-h-screen w-full bg-violet-100 font-[Pretendard]">
+            {!shouldHideSidebar && 
+                <div className="w-74">
+                    <Sidebar />
+                </div>
+            }
             {/* 본문 영역 */}
-            <div className="flex flex-1 w-full">
+            <div className="flex flex-1">
                 <Outlet />
             </div>
         </div>

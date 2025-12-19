@@ -23,7 +23,7 @@ const Sidebar = () => {
     ];
         
     return (
-        <footer className="flex flex-col w-74 h-full p-10 gap-10 bg-gray-7 text-gray-900">
+        <div className="flex flex-col w-74 h-full p-10 gap-10 bg-gray-7 text-gray-900">
             <div className="flex items-end gap-1">
                 <div className="flex justify-center items-center w-[55px] h-[55px] p-1">
                     <img src={ECONFLIPICON1} className="" />
@@ -51,7 +51,7 @@ const Sidebar = () => {
                     })
                 }
             </div>
-        </footer>
+        </div>
     );
 }
 
