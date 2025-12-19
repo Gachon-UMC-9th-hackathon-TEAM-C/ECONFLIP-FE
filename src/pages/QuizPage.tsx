@@ -94,7 +94,7 @@ const QuizPage=()=>{
             <footer className="w-full  bg-white  ">
                 <div className="max-w-2xl mx-auto p-8 flex justify-end">
                     <button 
-                    className={`px-12 py-2 rounded-xl text-medium-24 flex transition-all
+                    className={`px-16 py-3 rounded-xl text-medium-24 flex transition-all
                         ${selectedIdx === null ? 'bg-gray-7 text-gray-5' : 'bg-primary text-white'}`}
                     disabled={selectedIdx === null}
                     onClick={handleNext}
