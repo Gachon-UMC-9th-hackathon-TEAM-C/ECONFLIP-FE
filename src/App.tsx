@@ -9,7 +9,9 @@ import Review from './pages/Review';
 import Library from './pages/Library';
 import Profile from './pages/Profile';
 import LearningCompletedPage from './pages/LearningCompletedPage';
+import CardLearningPage from './pages/CardLearningPage';
 
+import OnboardingPage from './pages/OnboardingPage';
 const publicRoutes: RouteObject[] = [
   {
     path: '/',
@@ -50,6 +52,14 @@ const protectedRoutes: RouteObject[] = [
       {
         path: "learningCompleted",
         element: <LearningCompletedPage/>
+      },
+      {
+        path: "cardlearning",
+        element: <CardLearningPage />,
+      },
+      {
+        path:"Onboarding",
+        element: <OnboardingPage />,
       },
     ],
   },
