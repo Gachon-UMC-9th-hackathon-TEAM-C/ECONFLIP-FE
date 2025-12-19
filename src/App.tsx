@@ -14,7 +14,7 @@ import ReviewCardPage from './pages/ReviewCardPage';
 import HomePage from './pages/Home/HomePage';
 import TodayLearnPage from './pages/TodayLearnPage';
 import LibraryPage from './pages/Library/LibraryPage';
-import ReviewCompletedPage from './pages/reviewCompletedPage';
+import ReviewCompletedPage from './pages/ReviewCompletedPage';
 
 const publicRoutes: RouteObject[] = [
   {
