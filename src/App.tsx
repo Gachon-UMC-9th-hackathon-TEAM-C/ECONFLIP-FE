@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import Review from './pages/Review';
 import Library from './pages/Library';
 import Profile from './pages/Profile';
-
+import OnboardingPage from './pages/OnboardingPage';
 const publicRoutes: RouteObject[] = [
   {
     path: '/',
@@ -45,6 +45,11 @@ const protectedRoutes: RouteObject[] = [
       {
         path: "profile",
         element: <Profile />,
+      },
+
+      {
+        path:"Onboarding",
+        element: <OnboardingPage />,
       },
     ],
   },
