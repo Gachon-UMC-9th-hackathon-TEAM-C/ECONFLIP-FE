@@ -19,6 +19,11 @@ const HomePage = () => {
     {category:"FISCAL", value: "재정" },          // 재정
   ];
 
+  const getCategoryLabel = (category: string) => {
+    const found = CATEGORIES.find(c => c.category === category);
+    return found ? found.value : category;
+  };
+
   const handleSelectCategory = (category: string) => {
     setSelectedCategoryArray([...selectedCategoryArray, category]);
   };
@@ -86,7 +91,7 @@ const HomePage = () => {
               <Tag
                 key={c.category}
                 category={c.category}
-                label={c.category}
+                label={getCategoryLabel(c.category)}
                 categoryList={selectedCategoryArray}
                 addCategory={handleSelectCategory}
                 deleteCategory={handleDeleteCategory}
