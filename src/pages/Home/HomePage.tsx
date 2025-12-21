@@ -34,7 +34,7 @@ const HomePage = () => {
       </div>
     );
   }
-
+  console.log(homeInfo);
   return (
     <div className="w-full min-h-screen bg-[#F3F6FB] flex justify-center">
       <div className="w-full max-w-[570px] pt-[100px] px-6 mx-auto">
@@ -56,17 +56,23 @@ const HomePage = () => {
 
         {/* 추천 주제 */}
         <div className="mt-10">
-          <p className="text-[18px] font-semibold text-[#1B1D1F] mb-4">
-            추천 주제
-          </p>
+        <p className="text-[18px] font-semibold text-[#1B1D1F] mb-4">
+          추천 주제
+        </p>
 
-          <div className="flex gap-4">
-            <Tag label="금리" />
-            <Tag label="물가" />
-            <Tag label="투자" />
-            <Tag label="재정" />
-          </div>
+        <div className="flex gap-4 flex-wrap">
+          {homeInfo?.recommendedCategory?.length !== 0 ?
+            homeInfo?.recommendedCategory?.map((c) => (
+              <Tag
+                key={c.category}
+                label={c.category}
+              />
+            )) :
+            <div>추천 주제가 없습니다.</div>
+            }
         </div>
+      </div>
+
 
         {/* 아래 문구 */}
         <p className="mt-10 text-center text-[18px] font-bold text-[#1B1D1F] flex items-center justify-center gap-2">
@@ -77,5 +83,4 @@ const HomePage = () => {
     </div>
   );
 };
-
 export default HomePage;
