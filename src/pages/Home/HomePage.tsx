@@ -46,6 +46,7 @@ const HomePage = () => {
         <TodayLearningCard
           dailyGoalCount={homeInfo?.dailyGoalCount ?? 0}
           studyCompletedCardCount={homeInfo?.studyCompletedCardCount ?? 0}
+
         />
 
         {/* 복습 카드 */}

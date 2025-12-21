@@ -4,6 +4,7 @@ import ProgressStatus from "../../common/ProgressStatus";
 interface TodayLearningCardProps {
   dailyGoalCount: number;
   studyCompletedCardCount: number;
+
 }
 
 const TodayLearningCard = ({
