@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "../component/common/Header";
 import FlipCard from "../component/FlipCard";
 import { useLocation, useNavigate } from "react-router-dom";
-import axiosInstance from "../services/axiosInstance";
+import { postReviewCompleted } from "../services/reviewService";
 
 
 const ReviewCardPage = () => {
@@ -29,7 +29,7 @@ const ReviewCardPage = () => {
 
   const handleReviewCompleted = async () => {
   try {
-    await axiosInstance.patch("/api/review"); // ✅ 완료 확정 처리
+    await postReviewCompleted()
     setCompletedCount(total); 
     navigate("/reviewCompletedPage", { replace: true });
   } catch (e) {
